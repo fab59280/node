@@ -36,7 +36,7 @@ RUN set -x \
 RUN set -x \
     && touch /root/.profile \
     # Install node packages
-    && npm install --silent -g \
+    && npm install --silent --force -g \
         gulp-cli \
         grunt-cli \
         bower \
@@ -73,7 +73,7 @@ RUN apk add --update \
     ruby-dev \
     && gem install \
         sass \
-        compass --no-ri --no-rdoc
+        compass --no-document
 ##############################################################################
 # ~ fin ~
 ##############################################################################
